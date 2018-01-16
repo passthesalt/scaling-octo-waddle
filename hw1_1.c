@@ -4,7 +4,7 @@ int main(int argc, char const *argv[]) {
   if (argc == 1) {
     printf("Error, too few arguments! \n");
   }
-  else if (argc > 3) {
+  else if (argc > 4) {
     printf("Error, too many arguments! \n");
   }
   else {
