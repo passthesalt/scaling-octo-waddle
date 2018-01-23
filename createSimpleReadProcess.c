@@ -5,16 +5,18 @@
 void recursive_fork(int num_Instances);
 
 int main(int argc, char const *argv[]) {
-  if (argc < 2) {
-    printf("Error, too few arguments! \n");
+  if (argc == 1) {
+    recursive_fork(1);
   }
   else if (argc > 2) {
     printf("Error, too many arguments! \n");
   }
-  char *ptr;
-  long num = strtol(argv[1], &ptr, 10);
-  recursive_fork(num);
-
+  else {
+    char *ptr;
+    long num = strtol(argv[1], &ptr, 10);
+    recursive_fork(num);
+  }
+  
   return 0;
 }
 
